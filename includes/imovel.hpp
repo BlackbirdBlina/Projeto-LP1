@@ -1,41 +1,48 @@
-#ifndef imovel_hpp
-#define imovel_hpp
+#ifndef IMOVEL_HPP
+#define IMOVEL_HPP
 #include <string>
-using namespace std;
 
-static int nextIdImovel = 1;
-class Imovel{
+class Imovel{    
+    public:
+    // declaração enum
+    enum TipoImovel {Casa, Apartamento, Terreno};
+    
     private:
+    // declaração de auto-incremento
+    static int nextId;
+    
+    // atributos
     int id;
-    // tipo (enum {casa, apartamento, terreno})
+    TipoImovel tipo;
     int proprietarioId;
     double lat;
     double lng;
-    string endereco;
+    std::string endereco;
     double preco;
 
     public:
-    //construtor
-    Imovel(int id, int proprietarioId, double lat, double lng, string endereco, double preco);
-
-    //setters
-    void setId(int id);
-    void setProprietarioId(int proprietarioId);
-    void setLat(double lat);
-    void setLng(double lng);
-    void setEndereco(string endereco);
-    void setPreco(double preco);
+    // construtor
+    Imovel(TipoImovel tipo, int proprietarioId, double lat, double lng, std::string endereco, double preco);
 
     // destrutor
     ~Imovel() = default;
-        
-    //getters
+
+    // getters
     int getId();
+    TipoImovel getTipo();
     int getProprietarioId();
     double getLat();
     double getLng();
-    string getEndereco();
+    std::string getEndereco();
     double getPreco();
+
+    // setters
+    void setTipo(TipoImovel tipo);
+    void setProprietarioId(int proprietarioId);
+    void setLat(double lat);
+    void setLng(double lng);
+    void setEndereco(std::string endereco);
+    void setPreco(double preco);
 
 };
 
