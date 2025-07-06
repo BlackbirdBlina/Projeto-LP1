@@ -1,12 +1,12 @@
-#ifndef corretor_hpp
-#define corretor_hpp
+#ifndef CORRETOR_HPP
+#define CORRETOR_HPP
 #include <string>
 using namespace std;
 
-static int nextIdCorretor = 1;
 class Corretor{
     private:
     int id;
+    static int nextId;
     string nome;
     string telefone;
     bool avaliador;
@@ -14,7 +14,7 @@ class Corretor{
     double lng;
 
     public:
-    Corretor(int id, string nome, string telefone, bool avaliador, double lat, double lng);
+    Corretor(string nome, string telefone, bool avaliador, double lat, double lng);
     void setId(int id);
     void setNome(string nome);
     void setTelefone(string telefone);

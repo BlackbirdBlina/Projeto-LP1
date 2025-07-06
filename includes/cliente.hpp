@@ -1,17 +1,17 @@
-#ifndef cliente_hpp
-#define cliente_hpp
+#ifndef CLIENTE_HPP
+#define CLIENTE_HPP
 #include <string>
 using namespace std;
 
-static int nextIdCliente = 1;
 class Cliente{
     private:
     int id;
+    static int nextId;
     string nome;
     string telefone;
 
     public:
-    Cliente(int id, string nome, string telefone);
+    Cliente(string nome, string telefone);
     void setId(int id);
     void setNome(string nome);
     void setTelefone(string telefone);
