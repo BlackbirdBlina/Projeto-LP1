@@ -1,5 +1,5 @@
-#ifndef UTILS_H
-#define UTILS_H
+#ifndef OBTEMDISTANCIA_H
+#define OBTEMDISTANCIA_H
 
 constexpr double EARTH_R = 6371.0;
 
