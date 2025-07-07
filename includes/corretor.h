@@ -33,4 +33,6 @@ class Corretor{
 
 };
 
+vector<Corretor> lerCorretor(int quantidade, vector<Corretor&> &avaliadores);
+
 #endif

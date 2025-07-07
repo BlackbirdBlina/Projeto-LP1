@@ -1,6 +1,7 @@
 #ifndef CLIENTE_HPP
 #define CLIENTE_HPP
 #include <string>
+#include <vector>
 using namespace std;
 
 class Cliente{
@@ -23,5 +24,7 @@ class Cliente{
     string getTelefone();
 
 };
+
+vector<Cliente> lerCliente(int quantidade);
 
 #endif
