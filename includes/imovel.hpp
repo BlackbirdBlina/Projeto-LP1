@@ -1,17 +1,19 @@
 #ifndef IMOVEL_HPP
 #define IMOVEL_HPP
 #include <string>
+#include <vector>
+#include <functional>
 
 class Imovel{    
     public:
-    // declaração enum
+    // Declaração enum
     enum TipoImovel {Casa, Apartamento, Terreno};
     
     private:
-    // declaração de auto-incremento
+    // Declaração de auto-incremento
     static int nextId;
     
-    // atributos
+    // Atributos
     int id;
     TipoImovel tipo;
     int proprietarioId;
@@ -21,13 +23,13 @@ class Imovel{
     double preco;
 
     public:
-    // construtor
-    Imovel(TipoImovel tipo, int proprietarioId, double lat, double lng, std::string endereco, double preco);
+    // Construtor
+    Imovel(TipoImovel tipo, int proprietarioId, double lat, double lng, double preco, std::string endereco);
 
-    // destrutor
+    // Destrutor
     ~Imovel() = default;
 
-    // getters
+    // Getters
     int getId();
     TipoImovel getTipo();
     int getProprietarioId();
@@ -36,14 +38,16 @@ class Imovel{
     std::string getEndereco();
     double getPreco();
 
-    // setters
+    // Setters
     void setTipo(TipoImovel tipo);
     void setProprietarioId(int proprietarioId);
     void setLat(double lat);
     void setLng(double lng);
-    void setEndereco(std::string endereco);
     void setPreco(double preco);
+    void setEndereco(std::string endereco);
 
 };
+
+std::vector<Imovel> lerImovel(int quantidade);
 
 #endif
