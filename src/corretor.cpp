@@ -10,7 +10,8 @@ Corretor::Corretor(string nome, string telefone, bool avaliador, double lat, dou
 
 }
 
-vector<Corretor> lerCorretor(int quantidade, vector<Corretor&> &avaliadores){
+// Criando novas instâncias de corretor
+vector<Corretor> lerCorretor(int quantidade, vector<reference_wrapper<Corretor>> &avaliadores){
     vector<Corretor> corretores;
     for (int i = 0; i < quantidade; ++i) {
         string tel, nome;
@@ -18,7 +19,7 @@ vector<Corretor> lerCorretor(int quantidade, vector<Corretor&> &avaliadores){
         double lat, lng;
         cin >> tel >> avaliador >> lat >> lng;
         getline(cin >> ws, nome);
-        corretores.emplace_back(tel, avaliador, lat, lng, nome);
+        corretores.emplace_back(nome, tel, avaliador, lat, lng);
         if (avaliador){
             avaliadores.push_back(corretores.back());
         }

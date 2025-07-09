@@ -1,6 +1,8 @@
 #ifndef CORRETOR_HPP
 #define CORRETOR_HPP
 #include <string>
+#include <vector>
+#include <functional>
 using namespace std;
 
 class Corretor{
@@ -33,6 +35,6 @@ class Corretor{
 
 };
 
-vector<Corretor> lerCorretor(int quantidade, vector<Corretor&> &avaliadores);
+vector<Corretor> lerCorretor(int quantidade, vector<reference_wrapper<Corretor>> &avaliadores);
 
 #endif
