@@ -3,6 +3,9 @@
 #include <string>
 #include <vector>
 #include <functional>
+#include "agenda.h"
+#include "imovel.h"
+
 using namespace std;
 
 class Corretor{
@@ -14,6 +17,7 @@ class Corretor{
     bool avaliador;
     double lat;
     double lng;
+    vector<Agenda> agenda;
 
     public:
     Corretor(string nome, string telefone, bool avaliador, double lat, double lng);
@@ -32,9 +36,11 @@ class Corretor{
     bool getAvaliador();
     double getLat();
     double getLng();
+    vector<Agenda>& getAgendas();
 
 };
 
-vector<Corretor> lerCorretor(int quantidade, vector<reference_wrapper<Corretor>> &avaliadores);
+vector<Corretor> lerCorretor(int quantidade);
+void agendamento(vector<reference_wrapper<Corretor>> &avaliadores, vector<Imovel> &imoveis);
 
 #endif

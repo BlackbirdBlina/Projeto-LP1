@@ -1,5 +1,8 @@
 #include "cliente.h"
+#include <vector>
 #include <iostream>
+#include <string>
+
 using namespace std;
 
 int Cliente::nextId = 1;
