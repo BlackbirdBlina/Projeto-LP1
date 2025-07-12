@@ -12,19 +12,24 @@ class Cliente{
     string telefone;
 
     public:
+    // Construtor
     Cliente(string nome, string telefone);
-    void setId(int id);
-    void setNome(string nome);
-    void setTelefone(string telefone);
 
+    // Destrutor
     ~Cliente() = default;
 
-    int getId();
-    string getNome();
-    string getTelefone();
+    // Métodos setters e getters a serem implementados se necessário
+    // void setId(int id);
+    // void setNome(string nome);
+    // void setTelefone(string telefone);
+
+    // int getId();
+    // string getNome();
+    // string getTelefone();
 
 };
 
+// Função de leitura para cliente se necessário
 vector<Cliente> lerCliente(int quantidade);
 
 #endif

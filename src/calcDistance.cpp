@@ -1,6 +1,7 @@
 #include <cmath>
 #include "calcDistance.h"
 
+// Implementação da haversine usada para capturar a posição dos corretores/avaliadores
 double haversine(double lat1, double lon1, double lat2, double lon2){
     auto deg2rad = [](double d) { return d * M_PI / 180.0; };
     double dlat = deg2rad(lat2 - lat1);

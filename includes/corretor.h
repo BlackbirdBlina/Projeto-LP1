@@ -20,15 +20,18 @@ class Corretor{
     vector<Agenda> agenda;
 
     public:
+    // Construtor
     Corretor(string nome, string telefone, bool avaliador, double lat, double lng);
+    // Destrutor
+    ~Corretor() = default;
+
+    // Métodos setters e getters possíveis de serem implementados
     void setId(int id);
     void setNome(string nome);
     void setTelefone(string telefone);
     void setAvaliador(bool avaliador);
     void setLat(double lat);
     void setLng(double lng);
-
-    ~Corretor() = default;
 
     int getId();
     string getNome();
@@ -40,7 +43,9 @@ class Corretor{
 
 };
 
+// Função a ser implementada para realizar a leitura dos dados informados nos arquivos .txt
 vector<Corretor> lerCorretor(int quantidade);
+// Função para realizar o "match" de avaliadores com os imóveis
 void agendamento(vector<reference_wrapper<Corretor>> &avaliadores, vector<Imovel> &imoveis);
 
 #endif
