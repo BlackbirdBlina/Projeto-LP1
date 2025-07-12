@@ -6,14 +6,14 @@ using namespace std;
 
 class Imovel{
     public:
-    // declaração enum
+    // Enumeração para definir os tipos possíveis de imóvel
     enum TipoImovel {Casa, Apartamento, Terreno};
 
     private:
-    // declaração de auto-incremento
+    // Declaração de auto-incremento para controle de IDs
     static int nextId;
 
-    // atributos
+    // Atributos
     int id;
     TipoImovel tipo;
     int proprietarioId;
@@ -23,13 +23,13 @@ class Imovel{
     string endereco;
 
     public:
-    // construtor
+    // Construtor
     Imovel(TipoImovel tipo, int proprietarioId, double lat, double lng, double preco, string endereco);
 
-    // destrutor
+    // Destrutor
     ~Imovel() = default;
 
-    // getters
+    // Getters
     int getId();
     TipoImovel getTipo();
     int getProprietarioId();
@@ -38,7 +38,7 @@ class Imovel{
     string getEndereco();
     double getPreco();
 
-    // setters
+    // Setters
     void setTipo(TipoImovel tipo);
     void setProprietarioId(int proprietarioId);
     void setLat(double lat);
@@ -48,6 +48,7 @@ class Imovel{
 
 };
 
+// Função que lê uma quantidade de imóveis e retorna um vetor com eles
 vector<Imovel> lerImovel(int quantidade);
 
 #endif
